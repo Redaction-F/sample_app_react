@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 
-type StringOrNull = string | null;
+type Operator = "+" | "-" | "×" | "÷" | "=";
+type OperetorOrNull = Operator | null;
 
-const operator_list: string[] = ["+", "-", "×", "÷", "="];
+const operator_list: Operator[] = ["+", "-", "×", "÷", "="];
 let numberSecond: number = 0;
 let secondCheck: boolean = false;
-let operator: StringOrNull = null;
+let operator: OperetorOrNull = null;
 let equalCheck: boolean = false;
 let operatorCheck: boolean = false;
 let point: number = 0;
@@ -60,7 +61,7 @@ const Display = () => {
     );
   };
 
-  const ButtonOperator = (props: {operator: string}) => {
+  const ButtonOperator = (props: {operator: Operator}) => {
     const onClickOperator = () => {
       if (!operatorCheck) {
         secondCheck = true;
