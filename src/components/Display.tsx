@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 type StringOrNull = string | null;
 
-const operator_list = ["+", "-", "×", "÷", "="];
+const operator_list: string[] = ["+", "-", "×", "÷", "="];
 let numberSecond: number = 0;
 let secondCheck: boolean = false;
 let operator: StringOrNull = null;
